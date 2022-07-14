@@ -1,5 +1,6 @@
 import socket
 import time
+import json
 import tkinter as tk
 from colorama import Fore, init
 from datetime import datetime
@@ -7,11 +8,16 @@ from threading import Thread
 
 init()
 
-print(f'{Fore.YELLOW}[?] Use the default server data? [192.168.1.64:4444] [y/n]: {Fore.RESET}', end='')
+with open('RCConfig.json', 'r') as f:
+	config = json.load(f)
+	srv_port = config['srv_port']
+	srv_addr = config['srv_addr']
+
+print(f'{Fore.YELLOW}[?] Use the default server data? [{srv_addr}:{srv_port}] [y/n]: {Fore.RESET}', end='')
 yorn = input()
 if yorn == 'y':
-	SERVER_HOST = '192.168.1.64'
-	SERVER_PORT = 4444
+	SERVER_HOST = srv_addr
+	SERVER_PORT = srv_port
 elif yorn == 'n':
 	try:
 		print(f'{Fore.YELLOW}[?] Enter server\'s IP address or address and port [ip:port]: {Fore.RESET}', end='')

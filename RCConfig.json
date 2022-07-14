@@ -1,0 +1,4 @@
+{
+	"srv_port": 4444,
+	"srv_addr": "SERVER_ADDRESS"
+}
