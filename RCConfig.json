@@ -1,4 +1,4 @@
 {
 	"srv_port": 4444,
-	"srv_addr": "SERVER_ADDRESS"
+	"srv_addr": "127.0.0.1"
 }

@@ -1,26 +1,21 @@
 # RaptorChat by Raptorox
 
-RaptorChat is a simple chat made in Python. It aims to provide
-an easy to use chat to communicate with other users over a home
-network.
+RaptorChat is a simple chat made in Python. It allows to communicate with other users over a home/local network.
 
-# Installation
+# Usage
 
-To install, simply run `pip install -r requirements.txt` in your terminal.
+1. Install the depenencies with `pip install -r requirements.txt`.
+2. Set the desired port and the IP address of the server in `RCConfig.json`.
+3. Run `python RCServer.py` on the server and `python RCClient.py` on the clients
 
-# Configuration
+A computer with a server can also be running a client.
 
-The server uses the port provided in `RCConfig.json` as the port to run on.
-
-The client uses the config file as well, to get the default server
-address and port to connect to.
-
-It is highly recommended to set the desired port and address in the config.
+You may need to make an exception in your firewall settings.
 
 # Platform support
 
 Windows: working
 
-Linux: untested, but probably working (DM/WM required)
+Linux: working (DM/WM required)
 
 MacOS: not planned
